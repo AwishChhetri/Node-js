@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>Form</title>
+</head>
+<body>
+    <h1 id="details" >Details</h1>
+    <form id="form">
+        <h3>Email</h3>
+        <input label="Email" type="email" name="email" id="email" required>
+        <h3>Password</h3>
+        <input label="Password" type="password" id="password" autofocus>
+        <input type="checkbox" id="check">Show Password
+        <h3>Mobile Number</h3>
+        <input label="Mobile" type="number" id="mobile">
+        <button type="submit" form="form" value="Submit" id="submit">Submit</button>
+    </form>
+
+
+    <!-- <script>
+        function myFunction() {
+        var x = document.getElementById("input");
+        if (x.type === "password") {
+        x.type = "text";
+         } else {
+        x.type = "password";
+        }
+        }
+    </script> -->
+
+    <script>
+        $('#check').on('click',()=>{
+            var password=document.getElementById('input');
+           
+            password.type=='password' ? password.type='text' : password.type='password'
+        })
+    </script>
+
+    <script>
+        // $('#check').on('click',()=>{
+        //     var password=document.getElementById('input');
+        //     alert("heloo")
+        //    password.type=="password" ? password.type="text" :password.type="password"
+            
+            
+            
+        // })
+        //     var submit=document.getElementById('submit');
+        
+            // $('#submit').on('click',(e)=>{
+            //     e.preventDefault()
+            //    console.log("You have clicked the submit button")
+            //    const email=$('#email').val();
+            //    const pass=$('#password').val();
+            //    const mobile=$('#mobile').val();
+
+            // console.log(name,age,password)
+            // //    $.ajax({
+            // //     url:'/register/',
+            // //     method:"POST",
+            // //     data:{
+            //         email:email,
+            //         password:pass,
+            //         mob:mobile,
+
+            // },
+            //     success:((res)=>{
+            //         if(res.status=='sucess'){
+            //             alert(res.msg)
+            //         }else{
+            //             alert('error')
+            //         }
+            //     })
+            //    })
+
+
+            
+            //    const xhr =new XMLHttpRequest();
+
+            //    xhr.open('GET','abish.txt',true);
+
+            //    xhr.onload=()=>{
+            //     alert(this.responseText)
+            //    }
+
+            //    xhr.send();
+
+            // });
+
+            // $("#cleck").on('click',()=>{
+            //     var password=document.getElementById('input');
+
+            //     password.type=="password" ? password.type="text" :password.type="password"
+            // })
+            // $(document).ready(function(){
+            // $("input").focus(function(){
+            // $(this).css("background-color", "yellow");
+            // });
+            // $("input").blur(function(){
+            // $(this).css("background-color", "green");
+            // });
+            // });
+
+           
+     </script>
+</body>
+</html>
+
+<!-- <script>
+    $('#submit').on('click',()=>{
+   
+        var form=new FormData();
+        form.append('mobile',$('#mobile').val())
+
+    $.ajax({
+        url:"/register",
+        method:"POST",
+        data:{
+            name:$('#name').val(),
+            mobile:$('#mobile').val()
+        },
+        success:((res)=>{
+            if(res.status=='success'){
+                alert('form submitted')
+            }else{
+                //
+            }
+        })
+    })
+})
+
+</script> -->
